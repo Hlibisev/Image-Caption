@@ -44,7 +44,7 @@ optimizer = optim.AdamW(model.parameters(), lr=learning_rate)
 model.train()
 
 losses = 0
-CLS = (torch.zeros(32, device="cuda") + 101).unsqueeze(0).T
+CLS = (torch.zeros(32, device=device) + 101).unsqueeze(0).T
 
 if load_model:
     load_checkpoint(torch.load("/content/drive/My Drive/Colab Notebooks/my_checkpoint4.pth.tar"), model, optimizer)
