@@ -1,2 +1,0 @@
-# ImageCaption
-asdasdasdasdas
