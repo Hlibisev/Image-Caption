@@ -1,18 +1,17 @@
 import os
-from torch.nn.utils.rnn import pad_sequence
-from PIL import Image
-from torch.utils import data
-from pytorch_pretrained_bert import BertTokenizer
 import os.path
+import torch
+from torch.nn.utils.rnn import pad_sequence
+from torch.utils import data
+from torch.utils.data import Subset
+from torchvision import transforms
+from PIL import Image
+from pytorch_pretrained_bert import BertTokenizer
 from pycocotools.coco import COCO
 from collections import Counter
-from tqdm.notebook import tqdm
+from tqdm import tqdm
 import numpy as np
-from torchvision import transforms
-import torch
-from torch.utils.data import Subset
 from sklearn.model_selection import train_test_split
-
 
 
 class CoCoDataset(data.Dataset):
